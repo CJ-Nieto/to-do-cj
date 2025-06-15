@@ -1,8 +1,7 @@
-import create from 'zustand';
-import { generateTaskId } from "../utils/formatTasks";
+import { create } from 'zustand';
 
-interface Task {
-  id: string;
+export interface Task {
+  id: number;
   name: string;
   priority: "Alta" | "Media" | "Baja";
   createdAt: Date;
@@ -11,7 +10,7 @@ interface Task {
 interface StoreState {
   tasks: Task[];
   addTask: (task: Task) => void;
-  removeTask: (id: string) => void;
+  removeTask: (id: number) => void;
 }
 
 const useStore = create<StoreState>((set) => ({

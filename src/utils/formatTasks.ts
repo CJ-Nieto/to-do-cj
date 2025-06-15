@@ -1,7 +1,12 @@
-import { v4 as uuidv4 } from "uuid";
+export function generateTaskId(tasks: Array<{ id: number }>) {
+  if (!tasks.length) return 1;
+  const ids = tasks.map((t) => t.id);
+  // Busca el menor ID disponible (por si hay huecos)
+  let id = 1;
+  while (ids.includes(id)) id++;
+  return id.toString();
+}
 
-export const generateTaskId = (): string => uuidv4();
-
-export const normalizeTask = (task: string): string => {
-  return task.trim().replace(/\s+/g, " ").replace(/^\w/, (c) => c.toUpperCase());
-};
+export function normalizeTask(name: string) {
+  return name.trim();
+}
