@@ -42,6 +42,17 @@ function App() {
         <h1>To-Do List con Prioridades 🚀</h1>
         <TaskInput />
         <TaskList />
+
+      {/* Pie de página */}
+      <footer style={{ textAlign: "center", padding: "10px", fontSize: "14px", marginTop: "20px" }}>
+        <p>Desarrollado por <strong>CJ Nieto</strong></p>
+        <a href="https://www.linkedin.com/in/cjnieto" target="_blank" style={{ marginRight: "10px" }}>
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" width="30" height="30" />
+        </a>
+        <a href="https://github.com/CJ-Nieto" target="_blank">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" width="30" height="30" />
+        </a>
+      </footer>
       </div>
     </div>
   );
